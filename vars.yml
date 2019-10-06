@@ -14,19 +14,19 @@ qcow2_download_location: '/tmp/'
 k8s_resource_pool: 'Kubernetes'
 
 # Path to the SSH Public Key on your Proxmox Server.
-k8s_ssh_key: '/root/.ssh/sol.milkyway.kubernetes.pub'
+k8s_ssh_key: '/root/.ssh/id_rsa.pub'
 
 # VM IDs
-k8s_master_id: '4010'
-k8s_node1_id: '40100'
-k8s_node2_id: '40101'
-k8s_node3_id: '40102'
+k8s_master_id: '3010'
+k8s_node1_id: '30100'
+k8s_node2_id: '30101'
+k8s_node3_id: '30102'
 
 # Hostnames
-k8s_master_hn: 'Pluto'
-k8s_node1_hn: 'Ceres'
-k8s_node2_hn: 'Eris'
-k8s_node3_hn: 'Haumea'
+k8s_master_hn: 'Elpatron'
+k8s_node1_hn: 'JavierPena'
+k8s_node2_hn: 'SteveMurphy'
+k8s_node3_hn: 'LaQuica	'
 
 # Number of CPUs
 k8s_master_cpu: '2'
@@ -36,9 +36,9 @@ k8s_node3_cpu: '4'
 
 # Amount of memory expressed in megabytes
 k8s_master_mem: '5120'
-k8s_node1_mem: '10240'
-k8s_node2_mem: '10240'
-k8s_node3_mem: '10240'
+k8s_node1_mem: '15360'
+k8s_node2_mem: '15360'
+k8s_node3_mem: '15360'
 
 # Disk Sizes
 k8s_master_size: '50G'
@@ -47,34 +47,34 @@ k8s_node2_size: '50G'
 k8s_node3_size: '50G'
 
 # IP Addresses
-k8s_master_ip: '192.168.40.10'
-k8s_node1_ip: '192.168.40.100'
-k8s_node2_ip: '192.168.40.101'
-k8s_node3_ip: '192.168.40.102'
+k8s_master_ip: '51.77.197.180'
+k8s_node1_ip: '51.77.197.181'
+k8s_node2_ip: '51.77.197.182'
+k8s_node3_ip: '51.77.197.183'
 
 # Subnet Sizes
-k8s_master_sn: '/24'
-k8s_node1_sn: '/24'
-k8s_node2_sn: '/24'
-k8s_node3_sn: '/24'
+k8s_master_sn: '/28'
+k8s_node1_sn: '/28'
+k8s_node2_sn: '/28'
+k8s_node3_sn: '/28'
 
 # Network Gateway
-k8s_master_gw: '192.168.40.1'
-k8s_node1_gw: '192.168.40.1'
-k8s_node2_gw: '192.168.40.1'
-k8s_node3_gw: '192.168.40.1'
+k8s_master_gw: '51.77.197.190'
+k8s_node1_gw: '51.77.197.190'
+k8s_node2_gw: '51.77.197.190'
+k8s_node3_gw: '51.77.197.190'
 
 # DNS Servers
-k8s_master_ns: '192.168.1.100'
-k8s_node1_ns: '192.168.1.100'
-k8s_node2_ns: '192.168.1.100'
-k8s_node3_ns: '192.168.1.100'
+k8s_master_ns: '8.8.8.8'
+k8s_node1_ns: '8.8.8.8'
+k8s_node2_ns: '8.8.8.8'
+k8s_node3_ns: '8.8.8.8'
 
 # Search Domains
-k8s_master_sd: 'sol.milkyway'
-k8s_node1_sd: 'sol.milkyway'
-k8s_node2_sd: 'sol.milkyway'
-k8s_node3_sd: 'sol.milkyway'
+k8s_master_sd: 'master.nan.ci'
+k8s_node1_sd: 'node1.nan.ci'
+k8s_node2_sd: 'node2.nan.ci'
+k8s_node3_sd: 'node3.nan.ci'
 
 # Network Bridges
 k8s_master_bridge: 'vmbr0'
@@ -89,7 +89,7 @@ k8s_node2_stg: 'SaturnPool'
 k8s_node3_stg: 'SaturnPool'
 
 # CIDR for the Calico Pod Network - MUST be different from your Kubernetes CIDR to avoid an IP conflict. Subnet size will automatically be set to /16.
-calico_cidr: '172.16.0.0'
+calico_cidr: '172.17.0.0'
 
 # URL for the Calico Network Policy: 
 # Can be found here: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#tabs-pod-install-2
@@ -100,7 +100,7 @@ calico_policy_url: 'https://docs.projectcalico.org/v3.8/manifests/calico.yaml'
 k8s_dasboard_url: 'https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta4/aio/deploy/recommended.yaml'
 
 # Service user created for the dashboard.
-k8s_user_name: 'tj'
+k8s_user_name: 'keffaService'
 
 
 ###############################################################################################
@@ -137,19 +137,19 @@ k8s_node3_vlan: '40'
 ###############################################################################################
 
 # SMTP Server
-smtp_server: 'smtp.gmail.com'
+smtp_server: 'cwp.nan.ci'
 
 # SMTP Port 
-smtp_port: '587'
+smtp_port: '465'
 
 # SMTP Server username
-smtp_username: 'thomaszimmerman93@gmail.com'
+smtp_username: 'keffa@nan.ci'
 
 # SMTP Server password
-smtp_password: 'PASSWORD'
+smtp_password: '3fdfca49'
 
 # The email address to which notifications will be delivered.
-email_address: 'thomaszimmerman93@gmail.com'
+email_address: 'keffa@nan.ci'
 
 # You want to be naughty and use SMTP without TLS.
 #smtp_use_tls: 'off'
@@ -265,7 +265,7 @@ metallb_ap4_cidr: '192.168.70.1/24'
 ###############################################################################################
 
 # The IP Address to use 
-nginx_load_balancer_ip: '192.168.0.100'
+nginx_load_balancer_ip: '192.168.50.100'
 
 
 ###############################################################################################
