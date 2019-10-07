@@ -83,10 +83,10 @@ k8s_node2_bridge: 'vmbr0'
 k8s_node3_bridge: 'vmbr0'
 
 # Storage volumes
-k8s_master_stg: 'kubestr'
-k8s_node1_stg: 'kubestr'
-k8s_node2_stg: 'kubestr'
-k8s_node3_stg: 'kubestr'
+k8s_master_stg: 'local'
+k8s_node1_stg: 'local'
+k8s_node2_stg: 'local'
+k8s_node3_stg: 'local'
 
 # CIDR for the Calico Pod Network - MUST be different from your Kubernetes CIDR to avoid an IP conflict. Subnet size will automatically be set to /16.
 calico_cidr: '172.17.0.0'
