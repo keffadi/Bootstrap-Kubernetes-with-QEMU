@@ -146,7 +146,7 @@ smtp_port: '465'
 smtp_username: 'keffa@nan.ci'
 
 # SMTP Server password
-smtp_password: '3fdfca49'
+smtp_password: '3*******'
 
 # The email address to which notifications will be delivered.
 email_address: 'keffa@nan.ci'
